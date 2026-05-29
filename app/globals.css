@@ -1,0 +1,481 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- ROOT ---------- */
+
+:root{
+
+--bg:#050d1a;
+
+--cyan:#00b4ff;
+--cyan2:#00ffea;
+
+--purple:#7f5af0;
+
+--glass:rgba(255,255,255,.06);
+
+}
+
+/* ---------- BASE ---------- */
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+margin:0;
+
+background:var(--bg);
+
+color:white;
+
+font-family:
+Inter,
+system-ui,
+sans-serif;
+
+overflow-x:hidden;
+
+}
+
+/* ---------- PREMIUM SCROLLBAR ---------- */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#081120;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:
+linear-gradient(
+180deg,
+#00b4ff,
+#7f5af0
+);
+
+border-radius:999px;
+
+}
+
+/* ---------- SELECTION ---------- */
+
+::selection{
+
+background:#00b4ff;
+
+color:#fff;
+
+}
+
+/* ---------- GLASS SYSTEM ---------- */
+
+.glass{
+
+background:
+rgba(255,255,255,.06);
+
+backdrop-filter:
+blur(22px);
+
+-webkit-backdrop-filter:
+blur(22px);
+
+border:
+1px solid
+rgba(255,255,255,.08);
+
+box-shadow:
+
+0 8px 40px
+rgba(0,0,0,.35),
+
+0 0 35px
+rgba(0,180,255,.08);
+
+}
+
+/* ---------- PREMIUM CARD ---------- */
+
+.premium-card{
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(255,255,255,.08),
+
+rgba(255,255,255,.04)
+
+);
+
+backdrop-filter:
+blur(24px);
+
+border:
+
+1px solid
+rgba(255,255,255,.10);
+
+box-shadow:
+
+0 0 50px
+rgba(0,180,255,.10);
+
+transition:
+all .35s ease;
+
+}
+
+.premium-card:hover{
+
+transform:
+translateY(-8px);
+
+box-shadow:
+
+0 0 80px
+rgba(0,180,255,.22);
+
+border-color:
+rgba(0,255,234,.35);
+
+}
+
+/* ---------- GLOW TEXT ---------- */
+
+.glow-text{
+
+text-shadow:
+
+0 0 10px #00b4ff,
+
+0 0 30px #00b4ff;
+
+}
+
+/* ---------- CYAN GLOW ---------- */
+
+.cyan-glow{
+
+box-shadow:
+
+0 0 25px
+rgba(0,180,255,.35),
+
+0 0 80px
+rgba(0,180,255,.18);
+
+}
+
+/* ---------- PURPLE GLOW ---------- */
+
+.purple-glow{
+
+box-shadow:
+
+0 0 25px
+rgba(127,90,240,.35),
+
+0 0 80px
+rgba(127,90,240,.18);
+
+}
+
+/* ---------- BUTTON ENGINE ---------- */
+
+.btn-premium{
+
+padding:
+
+14px 26px;
+
+border-radius:
+
+20px;
+
+font-weight:700;
+
+position:relative;
+
+overflow:hidden;
+
+transition:
+all .35s ease;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#00b4ff,
+
+#7f5af0
+
+);
+
+box-shadow:
+
+0 0 35px
+rgba(0,180,255,.25);
+
+}
+
+.btn-premium:hover{
+
+transform:
+
+translateY(-3px)
+scale(1.04);
+
+box-shadow:
+
+0 0 55px
+rgba(0,180,255,.40);
+
+}
+
+/* ---------- FLOAT ANIMATION ---------- */
+
+@keyframes float{
+
+0%{
+
+transform:
+translateY(0px);
+
+}
+
+50%{
+
+transform:
+translateY(-18px);
+
+}
+
+100%{
+
+transform:
+translateY(0px);
+
+}
+
+}
+
+.float{
+
+animation:
+
+float 6s ease-in-out infinite;
+
+}
+
+/* ---------- SOFT PULSE ---------- */
+
+@keyframes pulseGlow{
+
+0%{
+
+box-shadow:
+
+0 0 0px
+rgba(0,255,234,.18);
+
+}
+
+50%{
+
+box-shadow:
+
+0 0 60px
+rgba(0,255,234,.35);
+
+}
+
+100%{
+
+box-shadow:
+
+0 0 0px
+rgba(0,255,234,.18);
+
+}
+
+}
+
+.pulse-glow{
+
+animation:
+
+pulseGlow 3s infinite;
+
+}
+
+/* ---------- ROTATION ---------- */
+
+@keyframes rotateSlow{
+
+from{
+
+transform:
+rotate(0deg);
+
+}
+
+to{
+
+transform:
+rotate(360deg);
+
+}
+
+}
+
+.rotate-slow{
+
+animation:
+
+rotateSlow
+20s linear infinite;
+
+}
+
+/* ---------- SHIMMER ---------- */
+
+@keyframes shimmer{
+
+0%{
+
+background-position:
+-1000px 0;
+
+}
+
+100%{
+
+background-position:
+1000px 0;
+
+}
+
+}
+
+.shimmer{
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.14),
+
+transparent
+
+);
+
+background-size:
+
+1000px 100%;
+
+animation:
+
+shimmer 6s linear infinite;
+
+}
+
+/* ---------- GRID OVERLAY ---------- */
+
+.grid-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(
+rgba(255,255,255,.03) 1px,
+transparent 1px
+);
+
+background-size:
+
+26px 26px;
+
+opacity:.18;
+
+pointer-events:none;
+
+}
+
+/* ---------- SECTION SPACING ---------- */
+
+section{
+
+position:relative;
+
+z-index:2;
+
+}
+
+/* ---------- PREMIUM HOVER ---------- */
+
+.hover-lift{
+
+transition:
+all .35s ease;
+
+}
+
+.hover-lift:hover{
+
+transform:
+
+translateY(-10px)
+scale(1.02);
+
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:768px){
+
+h1{
+
+font-size:
+3rem !important;
+
+}
+
+h2{
+
+font-size:
+2.5rem !important;
+
+}
+
+section{
+
+padding-left:24px !important;
+padding-right:24px !important;
+
+}
+
+}
